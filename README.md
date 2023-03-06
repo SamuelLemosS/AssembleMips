@@ -42,11 +42,10 @@ registrador $V0 para a rotina chamadora. As funções MULT, DIV e POT que precis
 implementadas, possuem interfaces conforme descrito abaixo. Execute a expressão passando os
 parâmetros necessários para as funções, usando o conceito de pilha de acordo com o Mips de um modo
 eficiente. Não utilizar os registradores $Si para i=0,....7
-MULT: /* Multiplicação*/ DIV: /* Divisão */ POT:/*Potenciação*/
-Input : $a1 //multiplicador Input: $a2 //dividendo Input: $a0 //Base
-$a0//multiplicando $a3 //divisor $a1 //expoente
+MULT: /* Multiplicação*/ Input : $a1//multiplicador  $a0//multiplicando Output: $v0
+DIV: /* Divisão * Input: $a2 //dividendo $a3 //divisor  Output: $v0
+/ POT:/*Potenciação*/ Input: $a0 //Base   $a1 //expoente  Output: $v0
 
-Output: $v0 Output: $v0 Output: $v0
 
 7) Um determinado programa procura copiar um determinado número de palavras num processador
 Mips de 32bits, duas palavras por vez, armazenadas a partir de um endereço M1 para um endereço
