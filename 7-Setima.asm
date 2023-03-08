@@ -69,7 +69,6 @@ confimar4:
 beq $t4,$t5,saida
 
 saida:
-addi $s2,$s2,2  #adionar 2 do total de numeros
 li $v0, 4        # system call code for print_str
 la $a0, valor      # address of string to print
 syscall          # print the string
